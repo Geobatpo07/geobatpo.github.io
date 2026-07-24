@@ -1,0 +1,50 @@
+# Subjects taught, grouped into coherent units rather than one card per
+# narrow topic. Each maps to real teaching or professional experience.
+
+- title: "Applied Mathematics & Calculus"
+  description: "Logic, algebra, calculus, and discrete structures, taught with a practical bridge to computing and data science rather than as abstract exercises."
+  level: "Foundational"
+  audience: "Undergraduate students, career changers"
+  applications: "Software engineering, data science, computational thinking"
+
+- title: "Linear Algebra & Probability"
+  description: "The two pillars underneath most of modern data science and machine learning, built from geometric and probabilistic intuition rather than memorized formulas."
+  level: "Foundational to Intermediate"
+  audience: "Undergraduate and Master's students"
+  applications: "Machine learning, statistics, numerical methods"
+
+- title: "Statistics & Numerical Analysis"
+  description: "Statistical inference and the numerical methods that make mathematical models computable, with an emphasis on stability and honest uncertainty."
+  level: "Intermediate"
+  audience: "Master's students, researchers"
+  applications: "Data analysis, scientific computing, simulation"
+
+- title: "Scientific Computing"
+  description: "Translating mathematical models into working numerical code: finite differences, stability, and the gap between a correct equation and a correct simulation."
+  level: "Intermediate to Advanced"
+  audience: "Master's students, PhD applicants, researchers"
+  applications: "Simulation, applied research, computational modelling"
+
+- title: "Python for Data Science"
+  description: "Data wrangling, exploratory analysis, and model building with Pandas, NumPy, and Scikit-learn, grounded in real workflows rather than isolated syntax."
+  level: "Foundational to Intermediate"
+  audience: "Career changers, professionals, undergraduate students"
+  applications: "Data analysis, machine learning pipelines, automation"
+
+- title: "SQL, Data Analysis & Business Intelligence"
+  description: "Querying, reporting, and dashboarding with SQL and Power BI, drawn directly from real analytics and reporting work rather than textbook examples."
+  level: "Foundational to Intermediate"
+  audience: "Professionals, career changers"
+  applications: "Reporting, dashboards, business analytics"
+
+- title: "Machine Learning & Artificial Intelligence"
+  description: "Classical machine learning and applied AI, taught with an emphasis on interpretability and validation over treating models as black boxes."
+  level: "Intermediate to Advanced"
+  audience: "Master's students, professionals, researchers"
+  applications: "Predictive modelling, decision support, applied AI"
+
+- title: "Data Engineering & Analytics Engineering"
+  description: "Building the pipelines and infrastructure that make analysis reproducible: the less visible discipline underneath every data science result."
+  level: "Intermediate to Advanced"
+  audience: "Professionals, career changers"
+  applications: "Data pipelines, analytics platforms, reproducible workflows"

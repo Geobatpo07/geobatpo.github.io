@@ -10,7 +10,7 @@ layout: compress
     {% include head.html %}
     {% include head/custom.html %}
   </head>
-  <body>
+  <body{% if page.full_width %} class="template--full"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}

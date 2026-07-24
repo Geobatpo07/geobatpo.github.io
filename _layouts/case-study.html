@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+  <article class="case-study" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="{{ page.title | escape }}">
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | escape }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+
+    <header class="case-study__header">
+      <span class="hero__section-label">Case Study</span>
+      <h1 class="hero__name" style="font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 0.75rem;">{{ page.title }}</h1>
+      {% if page.excerpt %}<p class="hero__statement" style="max-width: none;">{{ page.excerpt }}</p>{% endif %}
+
+      <div class="case-study__meta">
+        {% if page.status %}<span class="status-badge">{{ page.status }}</span>{% endif %}
+        {% if page.domain %}<span class="status-badge">{{ page.domain }}</span>{% endif %}
+        {% if page.read_time %}<span class="case-study__meta-item"><i class="fa fa-fw fa-clock" aria-hidden="true"></i> {% include read-time.html %}</span>{% endif %}
+        {% if page.last_updated %}<span class="case-study__meta-item">Updated {{ page.last_updated | date: "%B %Y" }}</span>{% endif %}
+      </div>
+
+      {% if page.technologies %}
+      <ul class="research-card__tech" style="margin-top: 1.1rem;">
+        {% for tech in page.technologies %}<li>{{ tech }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </header>
+
+    <div class="case-study__body page__content">
+      {{ content }}
+
+      {% if page.research_theme %}
+      <div class="rdv-panel" style="margin-top: 2.5rem;">
+        <h3 class="rdv-title">Related Research Theme</h3>
+        <p class="rdv-subtitle">This project is a concrete instance of the <strong>{{ page.research_theme }}</strong> research theme.</p>
+        <a href="/research/#research-themes" class="btn btn--outline">Explore Research &rarr;</a>
+      </div>
+      {% endif %}
+
+      <div class="rdv-panel" style="margin-top: 1.5rem;">
+        <h3 class="rdv-title">Development Journal</h3>
+        <p class="rdv-subtitle">This case study covers what was built or presented. The ideas, experiments, and dead ends along the way live on Geo's Stories.</p>
+        <a href="https://stories.geovanylaguerre.net" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Read the complete story &rarr;</a>
+      </div>
+
+      {% if page.github or page.docs or page.download or page.demo %}
+      <div style="margin: 2.5rem 0 1rem;">
+        <span class="hero__section-label">Resources</span>
+        <div class="hero__actions" style="margin-top: 0.75rem;">
+          {% if page.demo %}<a href="{{ page.demo }}" target="_blank" rel="noopener noreferrer" class="btn">{{ page.demo_label | default: "Live Demo" }}</a>{% endif %}
+          {% if page.github %}<a href="{{ page.github }}" target="_blank" rel="noopener noreferrer" class="btn{% if page.demo %} btn--outline{% endif %}">GitHub</a>{% endif %}
+          {% if page.docs %}<a href="{{ page.docs }}" target="_blank" rel="noopener noreferrer" class="btn btn--outline">{{ page.docs_label | default: "Documentation" }}</a>{% endif %}
+          {% if page.download %}<a href="{{ page.download }}" class="btn btn--outline">Download</a>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+
+      <p style="margin-top: 2rem;"><a href="{{ page.back_link | default: '/projects/' }}">&larr; {{ page.back_link_label | default: "Back to all projects" }}</a></p>
+    </div>
+  </article>
+</div>

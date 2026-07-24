@@ -1,0 +1,42 @@
+# Research highlight cards shown on the homepage.
+# Each entry: title, description, technologies (list), project (current/related work).
+
+- title: "Applied Mathematics"
+  description: "Pure mathematics and functional analysis as a foundation for modeling real systems, from finite structures to continuous dynamics."
+  technologies: ["Functional Analysis", "Group Theory", "Differential Equations"]
+  project: "Character Theory in Finite Fields"
+
+- title: "Numerical Analysis"
+  description: "Discretization and stability of PDE/ODE systems, from finite differences to operator splitting schemes."
+  technologies: ["Finite Differences", "Operator Splitting", "Lax-Friedrichs"]
+  project: "Westervelt equation simulations, LAMIA"
+
+- title: "Scientific Computing"
+  description: "Reproducible numerical simulation of physical and environmental systems, from ultrasound propagation to atmospheric flow."
+  technologies: ["Python", "C++", "Symbolic & Numerical Methods"]
+  project: "Cyclone flow modeling, MEMIAD"
+
+- title: "Mathematical Modelling"
+  description: "Compartmental and non-autonomous ODE systems for environmental transfer and exposure dynamics under seasonal forcing."
+  technologies: ["Compartmental Models", "ODE Systems", "R / Shiny"]
+  project: "Chlordecone contamination modeling"
+
+- title: "Artificial Intelligence"
+  description: "Machine learning and multi-agent systems applied to decision support, from classical ML to reproducible research tooling."
+  technologies: ["Scikit-learn", "TensorFlow / PyTorch", "Multi-agent Systems"]
+  project: "Scientific Assistant research framework"
+
+- title: "Healthcare Data"
+  description: "Data-driven decision support for clinical and public-health contexts, from triage prioritization to exposure modeling."
+  technologies: ["Random Forest", "Risk Scoring", "Python"]
+  project: "Medical Triage System"
+
+- title: "Biostatistics"
+  description: "Statistical inference and predictive modeling for health and environmental data, strengthened through the Master's Environment & Health specialization and applied work on healthcare data."
+  technologies: ["Statistical Inference", "Predictive Modeling", "R"]
+  project: "Environment & Health specialization, Master's programme"
+
+- title: "Digital Health"
+  description: "Interactive tools that turn mathematical models into usable decision-support instruments for researchers and practitioners."
+  technologies: ["Shiny", "Data Visualization", "Reproducible Pipelines"]
+  project: "Interactive simulation dashboards"

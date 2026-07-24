@@ -1,0 +1,24 @@
+<div class="feedback-form-wrap">
+  <form id="feedback-form" class="feedback-form">
+    <div class="feedback-form__field">
+      <label for="feedback-name">Name</label>
+      <input type="text" id="feedback-name" name="name" autocomplete="name" required>
+    </div>
+
+    <div class="feedback-form__field">
+      <label for="feedback-email">Email <span class="feedback-form__optional">(if you'd like a reply)</span></label>
+      <input type="email" id="feedback-email" name="email" autocomplete="email">
+    </div>
+
+    <div class="feedback-form__field">
+      <label for="feedback-message">Message</label>
+      <textarea id="feedback-message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn--large">Send Feedback</button>
+
+    <p class="feedback-form__note">
+      Submitting opens your email client with this message pre-filled; nothing is sent automatically or stored on this site.
+    </p>
+  </form>
+</div>

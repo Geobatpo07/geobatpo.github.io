@@ -1,0 +1,48 @@
+# "Ways We Can Collaborate" cards on the Contact page
+- icon: "fa-solid fa-flask"
+  title: "Research Collaborations"
+  description: "Joint work on mathematical modelling, scientific computing, or healthcare analytics problems, from an early idea to a shared publication."
+
+- icon: "fa-solid fa-building-columns"
+  title: "Academic Partnerships"
+  description: "Connections with laboratories, departments, or research groups working on related mathematical or computational questions."
+
+- icon: "fa-solid fa-industry"
+  title: "Industrial Research"
+  description: "Applied projects where rigorous modelling and data science methods can inform real engineering or business decisions."
+
+- icon: "fa-solid fa-heart-pulse"
+  title: "Healthcare Analytics"
+  description: "Work on public-health, epidemiological, or clinical data problems where careful modelling can support better decisions."
+
+- icon: "fa-solid fa-code"
+  title: "Scientific Software"
+  description: "Design or development of reproducible research tools, from numerical solvers to data platforms and AI-assisted research frameworks."
+
+- icon: "fa-brands fa-github"
+  title: "Open-source Projects"
+  description: "Contributions, code reviews, or new collaborations around DataHut-DuckHouse, Scientific Assistant, or related tools."
+
+- icon: "fa-solid fa-chalkboard-user"
+  title: "Teaching"
+  description: "Curriculum discussions, joint courses, or exchanges on how to teach mathematics and data science well."
+
+- icon: "fa-solid fa-microphone-lines"
+  title: "Guest Lectures"
+  description: "Talks or seminar sessions on applied mathematics, scientific computing, AI, or healthcare analytics for a course or research group."
+
+- icon: "fa-solid fa-user-graduate"
+  title: "Student Mentoring"
+  description: "Guidance for students navigating a thesis, a research direction, or an early step into computational science."
+
+- icon: "fa-solid fa-compass"
+  title: "Research Supervision"
+  description: "Support on a specific project or research question, within the scope my own experience allows."
+
+- icon: "fa-solid fa-chart-line"
+  title: "Data Science Consulting"
+  description: "Focused help on a data analysis, modelling, or engineering problem where an outside perspective would help."
+
+- icon: "fa-solid fa-comments"
+  title: "Speaking Invitations"
+  description: "Presentations for seminars, workshops, or events connected to mathematics, AI, or data science in research or education."

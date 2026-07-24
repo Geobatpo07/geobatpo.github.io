@@ -13,16 +13,22 @@ $doc-font-size              : 16;
 $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
-/* System typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+/* System typefaces (fallback stack if webfonts fail to load) */
+$system-serif                : Georgia, Times, serif;
+$system-sans-serif           : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace                  : "SFMono-Regular", Consolas, Monaco, "Lucida Console", monospace;
+
+/* Academic luxury typefaces */
+$body-font                   : "Inter", #{$system-sans-serif};
+$display-font                : "Fraunces", #{$system-serif};
 
 /* Sans serif typefaces */
+$sans-serif                 : $body-font;
 $sans-serif-narrow          : $sans-serif;
 $helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 /* Serif typefaces */
+$serif                      : $display-font;
 $georgia                    : Georgia, serif;
 $times                      : Times, serif;
 $bodoni                     : "Bodoni MT", serif;
@@ -39,8 +45,8 @@ $type-size-6                : 0.75em;   // ~12px
 $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
-$global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
+$global-font-family         : $body-font;
+$header-font-family         : $display-font;
 $caption-font-family        : $serif;
 
 /* ==========================================================================

@@ -1,0 +1,196 @@
+/* ==========================================================================
+   HOMEPAGE HERO
+   ========================================================================== */
+
+/* Let the homepage break out of the sidebar grid used by every other page */
+.template--full {
+  #main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page {
+    @include breakpoint($large) {
+      float: none !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding: 0 !important;
+    }
+  }
+
+  .page__title,
+  .page__content > h1:first-child {
+    display: none; // the hero supplies its own heading
+  }
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: $x-large;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 8vw, 6rem) 1.5rem clamp(2rem, 6vw, 3.5rem);
+
+  @include breakpoint($large) {
+    grid-template-columns: 1.15fr 0.85fr;
+    padding-top: clamp(3.5rem, 9vw, 7rem);
+  }
+}
+
+.hero__eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.35rem;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.85rem;
+  font-family: $sans-serif-narrow;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-royal-blue);
+  background: rgba(29, 78, 216, 0.08);
+  border: 1px solid rgba(29, 78, 216, 0.18);
+  border-radius: 999px;
+}
+
+html[data-theme="dark"] .hero__chip {
+  color: var(--color-cyan);
+  background: rgba(34, 211, 238, 0.08);
+  border-color: rgba(34, 211, 238, 0.24);
+}
+
+.hero__chip-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--global-text-color-light);
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.hero__name {
+  font-family: $display-font;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.35rem, 5vw, 3.85rem);
+  margin: 0 0 1.1rem;
+  color: var(--global-text-color);
+}
+
+.hero__statement {
+  font-family: $body-font;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.65;
+  color: var(--global-text-color-light);
+  max-width: 48ch;
+  margin: 0 0 1.25rem;
+}
+
+.hero__why {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  border-left: 3px solid var(--color-cyan);
+  padding-left: 1rem;
+  margin: 0 0 2rem;
+  max-width: 48ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.hero__portrait {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__portrait-frame {
+  position: relative;
+  width: min(320px, 78vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow-hover);
+  background: linear-gradient(160deg, var(--color-navy) 0%, #163257 100%);
+}
+
+.hero__portrait-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.hero__portrait-frame img {
+  position: relative;
+  z-index: 2;
+  width: 78%;
+  height: 78%;
+  margin: 11%;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.hero__section-label {
+  display: block;
+  font-family: $sans-serif-narrow;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  margin: 0 0 0.5rem;
+}
+
+.hero__section-heading {
+  font-family: $display-font;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  margin: 0 0 0.75rem;
+}
+
+/* Single-column, centered variant — used for editorial "opening question" /
+   "closing statement" moments (e.g. the About page bookends) */
+.hero--centered {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+
+  .hero__content {
+    max-width: 46rem;
+  }
+
+  .hero__eyebrow,
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__statement,
+  .hero__why {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__why {
+    border-left: none;
+    padding-left: 0;
+  }
+}

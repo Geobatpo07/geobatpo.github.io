@@ -4,7 +4,9 @@
 
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
+  background: var(--glass-bg-color);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+          backdrop-filter: blur(14px) saturate(160%);
   height: fit-content;
   top: 0;
   width: 100%;
@@ -29,6 +31,7 @@
     @include clearfix;
     padding: 0.5em 1em;
     font-family: $sans-serif-narrow;
+    letter-spacing: 0.01em;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -55,7 +58,7 @@
 }
 
 .masthead__menu-item {
-  background-color: var(--global-bg-color);
+  background-color: transparent;
   display: block;
   list-style-type: none;
   white-space: nowrap;
@@ -63,19 +66,20 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+    letter-spacing: 0.01em;
   }
 }
 
 .masthead__menu-item.selected a {
   color: var(--global-text-color);
   font-weight: 700;
-  border-bottom: 2px solid var(--global-text-color);
+  border-bottom: 2px solid var(--color-royal-blue);
   pointer-events: none; /* Move this here */
   cursor: default; /* Move this here too */
 }
 
 .masthead__menu-item.selected a:hover {
   color: var(--global-text-color);
-  border-bottom: 2px solid var(--global-text-color);
+  border-bottom: 2px solid var(--color-royal-blue);
   /* No need to repeat pointer-events and cursor here */
 }

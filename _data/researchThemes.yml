@@ -1,0 +1,64 @@
+# Research themes shown on the Research page.
+# Richer than the homepage's research.yml: each theme gets a fuller account
+# of why it matters, its scientific challenge, its current application here,
+# and how it connects to the broader research vision.
+
+- title: "Applied Mathematics"
+  why: "Every model in this research program starts as a mathematical object before it becomes anything computational."
+  challenge: "Formalizing a real system precisely enough that the mathematics constrains the model, rather than the other way around."
+  application: "Compartmental ODE systems, group-theoretic structures, differential equations underlying every project below."
+  connection: "The language everything else here is written in."
+
+- title: "Scientific Computing"
+  why: "A correct equation with no way to evaluate it is not yet useful."
+  challenge: "Discretizing continuous mathematics without discretizing away the physics it describes."
+  application: "Finite-difference and operator-splitting schemes for wave propagation and atmospheric flow models."
+  connection: "The bridge between a proof and a prediction."
+
+- title: "Numerical Analysis"
+  why: "Simulation results are only as trustworthy as the stability of the scheme producing them."
+  challenge: "Guaranteeing convergence and stability under the specific constraints of the problem, not just in theory."
+  application: "Stability analysis for finite-difference schemes applied to strongly damped wave equations."
+  connection: "The quality control layer beneath scientific computing."
+
+- title: "Mathematical Modelling"
+  why: "Complex environmental and health systems rarely have closed-form descriptions; they need models built for them."
+  challenge: "Capturing seasonal, non-autonomous dynamics without overfitting a model to a single dataset."
+  application: "Non-autonomous compartmental modelling of chlordecone environmental transfer and exposure."
+  connection: "Where applied mathematics meets a specific, named scientific question."
+
+- title: "Artificial Intelligence"
+  why: "Some structure in complex systems is easier to learn from data than to derive analytically."
+  challenge: "Keeping learned models transparent and validated rather than treating them as black boxes."
+  application: "A multi-agent research framework combining symbolic reasoning with machine learning."
+  connection: "Another modelling framework, held to the same rigor as the mathematical ones."
+
+- title: "Machine Learning"
+  why: "Classical statistical learning remains the most interpretable way to turn data into a decision signal."
+  challenge: "Choosing models simple enough to explain their own reasoning to a non-specialist."
+  application: "Random Forest-based risk scoring for clinical pre-triage prioritization."
+  connection: "Where AI research becomes a usable decision-support tool."
+
+- title: "Healthcare Analytics"
+  why: "Health decisions carry real consequences, which makes them the highest-stakes test of whether a model can be trusted."
+  challenge: "Building decision support that is fast and interpretable without oversimplifying the underlying risk."
+  application: "Pre-triage prioritization tooling and public-health exposure modelling."
+  connection: "The destination this entire research program is oriented toward."
+
+- title: "Biostatistics"
+  why: "Health and environmental data are noisy by nature; statistics is what keeps conclusions honest about that noise."
+  challenge: "Quantifying uncertainty in exposure and outcome estimates without overstating precision."
+  application: "Statistical grounding for exposure modelling and risk estimation work."
+  connection: "The discipline that keeps healthcare-facing models accountable."
+
+- title: "Environmental Modelling"
+  why: "Environmental systems are where seasonal forcing, delayed effects, and human exposure intersect."
+  challenge: "Representing rainfall-driven, seasonal contamination dynamics with a model simple enough to interpret."
+  application: "Chlordecone contamination modelling in tropical ecosystems."
+  connection: "A direct, concrete instance of mathematical modelling applied to public health."
+
+- title: "Scientific Data Infrastructure"
+  why: "A research result that can't be reproduced by someone else isn't finished, and reproducibility starts with the data layer."
+  challenge: "Designing infrastructure for reproducibility first, scale second, which most analytics stacks don't optimize for."
+  application: "A multi-tenant analytics platform integrating DuckDB, Apache Iceberg, dbt, and Trino."
+  connection: "The engineering discipline that makes every other theme here reproducible, not just correct."

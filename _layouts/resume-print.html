@@ -1,0 +1,17 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.data.resume.name }}</title>
+  {% if page.noindex %}
+  <meta name="robots" content="noindex,nofollow">
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+</head>
+<body>
+{{ content }}
+</body>
+</html>

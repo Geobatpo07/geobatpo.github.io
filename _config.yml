@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Geovany Batista Polo LAGUERRE"
 title_separator          : "-"
 name                     : &name "Geovany Batista Polo LAGUERRE"
-description              : &description "Data Scientist & Master's Student in Mathematics and Applications"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Applied Mathematics, Scientific Computing & AI Researcher | Master's in Mathematics and Applications"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://geovanylaguerre.net # Canonical base URL used for sitemaps, canonical links, and structured data
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,15 +23,16 @@ repository               : "Geobatpo07/geobatpo07.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "Geo_04.png"
   name             : "Geovany Batista Polo LAGUERRE"
   pronouns         : "he/him"  
-  bio              : "Data Scientist | Master's in Mathematics & Applications | Passionate about modeling, machine learning, and data engineering"
-  location         : "Pointe-à-Pitre, Guadeloupe"
+  bio              : "Master's in Mathematics and Applications, Mathematical Modelling and Decision Support Tools (Environment & Health) | Applied Mathematics, Scientific Computing & AI"
+  location         : "Villeneuve-le-Roi, Île-de-France, France"
   employer         : "Université des Antilles"
   uri              : # URL
-  email            : # Your email 
+  email            : "lgeobatpo98@gmail.com"
   geo_stories      : "https://stories.geovanylaguerre.net/"
+  superprof        : "https://www.superprof.fr/data-scientist-mathematicien-applique-enseigne-maths-statistiques-physique-algorithmique-pedagogie-adaptee.html"
 
   # Academic websites
   academia         : # URL
@@ -44,6 +45,7 @@ author:
   ssrn             : # URL
   pubmed           : # URL
   researchgate     : "https://www.researchgate.net/profile/Geovany-Batista-Polo-Laguerre"
+  credly           : "https://www.credly.com/users/geovany-laguerre"
   scopus           : # URL
   zotero           : # URL
 
@@ -85,12 +87,22 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Publications'
+  journal:
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
+  manuscripts:
+    title: 'Preprints & Research Notes'
+  technical_reports:
+    title: 'Technical Reports'
+  internship_reports:
+    title: 'Research Internship Reports'
+  thesis:
+    title: "Master's Thesis"
+  posters:
+    title: 'Academic Posters'
+  books:
+    title: 'Books'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -144,8 +156,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "profile.png" # Social media default site image (stored in /images)
-og_description           : "Academic and professional portfolio in data science, applied mathematics, and research."
+og_image                 : "Geo_04.png" # Social media default site image (stored in /images)
+og_description           : "Research and applied work in applied mathematics, scientific computing, data science, and artificial intelligence."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -232,9 +244,9 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /projects/:path/
   talks:
     output: true
     permalink: /:collection/:path/
@@ -278,15 +290,15 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _projects
   - scope:
       path: ""
-      type: portfolio
+      type: projects
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
+      layout: case-study
+      author_profile: false
+      full_width: true
+      read_time: true
   # _talks
   - scope:
       path: ""

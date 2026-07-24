@@ -1,0 +1,32 @@
+# "Who Should Contact Me" cards on the Contact page
+- icon: "fa-solid fa-flask-vial"
+  title: "Researchers & University Labs"
+  description: "Faculty and research groups working on related mathematical, computational, or healthcare problems."
+
+- icon: "fa-solid fa-user-graduate"
+  title: "Students & PhD Applicants"
+  description: "Master's students and prospective doctoral candidates thinking about a research direction or a thesis question."
+
+- icon: "fa-solid fa-chalkboard-user"
+  title: "Faculty Members"
+  description: "Colleagues interested in curriculum design, joint teaching, or academic partnerships."
+
+- icon: "fa-solid fa-hospital"
+  title: "Healthcare Organizations"
+  description: "Teams exploring analytics support for public-health or clinical decision problems."
+
+- icon: "fa-solid fa-briefcase"
+  title: "Industry Professionals"
+  description: "People working on data science, engineering, or applied AI problems in a business setting."
+
+- icon: "fa-solid fa-landmark"
+  title: "Public Institutions"
+  description: "Organizations considering data-driven approaches to policy, environmental, or public-health questions."
+
+- icon: "fa-solid fa-code-branch"
+  title: "Open-source Contributors"
+  description: "Developers and researchers interested in DataHut-DuckHouse, Scientific Assistant, or related tools."
+
+- icon: "fa-solid fa-lightbulb"
+  title: "Anyone Curious About Computational Science"
+  description: "No formal affiliation required. Curiosity about the questions this site describes is enough."

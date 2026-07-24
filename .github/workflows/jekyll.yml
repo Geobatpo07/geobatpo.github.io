@@ -43,11 +43,27 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Validate resume.yml
+        # Resume Loader validation — fails the build with a clear error
+        # list if _data/resume.yml is missing required fields.
+        run: ruby scripts/validate_resume.rb
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install PDF generation dependencies
+        run: npm install --no-save playwright http-server
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Generate CV PDF
+        # Renders the built /cv/ page to files/Profile.pdf so the PDF can
+        # never drift from the live resume.yml-driven page.
+        run: node scripts/generate-cv-pdf.mjs
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3

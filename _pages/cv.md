@@ -1,188 +1,286 @@
 ---
-layout: archive
-title: "CV"
+layout: single
 permalink: /cv/
-author_profile: true
+title: "Curriculum Vitae"
+full_width: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
+<section class="hero hero--centered reveal">
+  <div class="hero__content">
+    <p class="hero__name" style="font-size: clamp(1.9rem, 4vw, 2.9rem); margin-bottom: 0.75rem;">Curriculum Vitae</p>
+    <p class="hero__statement">
+      A concise overview of my academic journey, research experience, professional activities, and technical expertise.
+    </p>
+    <div class="hero__actions">
+      <a href="/files/Profile.pdf" class="btn btn--large">Download PDF CV</a>
+    </div>
+  </div>
+</section>
+
+<div class="page-prose" markdown="1" style="max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 3rem;">
+
+<span class="hero__section-label">Summary</span>
+
+## Academic Profile
+
+{{ site.data.resume.summary | markdownify }}
+
+The [Research](/research/), [Projects](/projects/), and [Scientific Journey](/about/) pages develop this further; what follows here is the evidence.
+
+---
+
+<span class="hero__section-label">Progression</span>
+
+## Timeline
+
+<ol class="cv-timeline">
+  {% for item in site.data.resume.timeline %}
+  <li class="cv-timeline__item">
+    <span class="cv-timeline__date">{{ item.date }}</span>
+    <span class="status-badge">{{ item.category }}</span>
+    <h3 class="cv-timeline__title">{{ item.title }}</h3>
+    <p class="cv-timeline__desc">{{ item.description }}</p>
+  </li>
+  {% endfor %}
+</ol>
+
+---
+
+<span class="hero__section-label">Academic Background</span>
+
+## Education
+
+<ul class="research-grid">
+  {% for edu in site.data.resume.education %}
+  <li class="research-card">
+    <h3 class="research-card__title">{{ edu.degree }}</h3>
+    <p class="case-study__meta-item">{{ edu.institution }} &middot; {{ edu.dates }}</p>
+    {% if edu.track %}<p class="research-card__desc">{{ edu.track }}</p>{% endif %}
+    {% if edu.research_topics %}<p class="research-card__desc"><strong>Research focus.</strong> {{ edu.research_topics }}</p>{% endif %}
+    {% if edu.supervisor %}<p class="research-card__desc"><strong>Supervisor.</strong> {{ edu.supervisor }}</p>{% endif %}
+    {% if edu.related_link %}<a href="{{ edu.related_link }}" class="project-teaser__link">{{ edu.related_link_label }} &rarr;</a>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+---
+
+<span class="hero__section-label">Where the Research Happened</span>
+
+## Research Experience
+
+<div class="project-teasers reveal">
+  {% for exp in site.data.resume.research_experience %}
+  <div class="project-teaser">
+    <h3>{{ exp.title }}</h3>
+    <p class="case-study__meta-item" style="margin-bottom: 0.9rem;">{{ exp.venue }} &middot; {{ exp.dates }}</p>
+    <p><strong>Context.</strong> {{ exp.context }}</p>
+    <p><strong>Objectives.</strong> {{ exp.objectives }}</p>
+    <p><strong>Methods.</strong> {{ exp.methods }}</p>
+    <p><strong>Contribution.</strong> {{ exp.contribution }}</p>
+    {% if exp.related_link %}<a href="{{ exp.related_link }}" class="project-teaser__link">{{ exp.related_link_label }} &rarr;</a>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+---
+
+<span class="hero__section-label">Applied Work</span>
+
+## Professional Experience
+
+<div class="project-teasers reveal">
+  {% for job in site.data.resume.experience %}
+  <div class="project-teaser">
+    <h3>{{ job.title }}</h3>
+    <p class="case-study__meta-item" style="margin-bottom: 0.9rem;">{{ job.venue }} &middot; {{ job.dates }}</p>
+    <p><strong>Responsibilities.</strong> {{ job.responsibilities }}</p>
+    {% if job.contributions %}<p><strong>Contributions.</strong> {{ job.contributions }}</p>{% endif %}
+    {% if job.impact %}<p><strong>Impact.</strong> {{ job.impact }}</p>{% endif %}
+    {% if job.technologies %}
+    <ul class="research-card__tech">
+      {% for tech in job.technologies %}<li>{{ tech }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+Teaching roles (Lecturer, Teaching Assistant, and Mathematics Tutor) are covered in full on the [Teaching](/teaching/) page rather than duplicated here.
+
+---
+
+<span class="hero__section-label">Evidence</span>
+
+## Research Outputs
+
+{% if site.author.googlescholar %}
+<p>You can also find my articles on <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">my Google Scholar profile</a>.</p>
+{% endif %}
+
 {% include base_path %}
+{% assign publications_sorted = site.publications | sort: 'date' | reverse %}
 
-Education
-======
-* **M.S. in Mathematics and Applications**, Université des Antilles, September 2024 - June 2026
-  * Department of Mathematics and IT, Pointe-à-Pitre, Guadeloupe
-  * Track: Modeling and Decision Support Tools
-  * Research: Differential Equations for Mathematical Modeling
+{% if site.publication_category %}
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+    {% for post in publications_sorted %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% assign venue_down = post.venue | default: '' | downcase %}
+      {% assign title_down = post.title | default: '' | downcase %}
+      {% assign is_preparation = false %}
+      {% if venue_down contains 'in preparation' or venue_down contains 'en preparation' or venue_down contains 'en préparation' or title_down contains 'in preparation' or title_down contains 'en preparation' or title_down contains 'en préparation' %}
+        {% assign is_preparation = true %}
+      {% endif %}
+      {% if is_preparation %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+<h3>{{ category[1].title }}</h3>
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single-cv.html %}
+    {% endfor %}
+    {% for post in publications_sorted %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% assign venue_down = post.venue | default: '' | downcase %}
+      {% assign title_down = post.title | default: '' | downcase %}
+      {% assign is_preparation = false %}
+      {% if venue_down contains 'in preparation' or venue_down contains 'en preparation' or venue_down contains 'en préparation' or title_down contains 'in preparation' or title_down contains 'en preparation' or title_down contains 'en préparation' %}
+        {% assign is_preparation = true %}
+      {% endif %}
+      {% unless is_preparation %}
+        {% continue %}
+      {% endunless %}
+      {% unless title_shown %}
+<h3>{{ category[1].title }}</h3>
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single-cv.html %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
 
-* **B.S. in Mathematics**, École Normale Supérieure de l'Université d'État d'Haïti, November 2021 - July 2022
+Research software and open-source contributions (DataHut-DuckHouse, Scientific Assistant, and others) are documented as full case studies in <a href="/projects/">Projects</a>. My Master's thesis has been completed and will be linked here soon.
 
-* **Engineer's Degree (Civil Engineering)**, Faculté des Sciences de l'Université d'État d'Haïti, October 2017 - July 2022
+---
 
-* **MicroMasters®** in Statistics and Data Science – Methods Track, MITx, January 2024
+<span class="hero__section-label">Toolkit</span>
 
-Research Experience
-======
-* **October 2017 - Present: Student Researcher**
-  * Université d'État d'Haïti - Laboratoire de Mathématiques et Applications
-  * Port-au-Prince, Haiti
-  * Research focus: Applied mathematics and mathematical modeling
-  
-* **2024-Present: Master's Research**
-  * Université des Antilles
-  * Department of Mathematics and IT
-  * Current research on differential equations and compartmental modeling
-  * Supervisor: Prof. Pascal Poullet
+## Technical Expertise
 
-Internships
-======
-* **Stage de recherche - Analyse mathematique et simulation d'un modele de propagation des ultrasons**, Universite des Antilles, Jan 2026-Present
-  * Laboratoire de Mathématiques Informatiques et Applications (LAMIA), Guadeloupe
-  * Studied the Westervelt equation and quasilinear strongly damped wave models
-  * Implemented Python numerical simulations (operator splitting and finite differences)
-  * Supervisors: Prof. Pascal Poullet, Prof. Lea Batteux
+<ul class="research-grid">
+  {% for skill in site.data.resume.skills %}
+  <li class="research-card">
+    <h3 class="research-card__title">{{ skill.category }}</h3>
+    <ul class="research-card__tech">
+      {% for item in skill.items %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
 
-* **Stage de recherche - Modelisation mathematique appliquée aux cyclones**, Universite des Antilles, Apr 2025-Jun 2025
-  * Management, Économie, Modélisation, Informatique et Aide à la Décision (MEMIAD), Martinique
-  * Developed ODE/PDE-based atmospheric flow models and asymptotic analysis around the cyclone eye
-  * Implemented numerical simulations in Python (Lax-Friedrichs scheme)
-  * Supervisor: Prof. Maximilian F. Hasler
+---
 
-Work Experience
-======
-* **Data Analyst**, Solutions S.A., Jul 2023-Present
-  * Port-au-Prince, Ouest Department, Haiti
-  * Contributed to ETL process design/testing and reporting automation (.NET, Python)
-  * Supported Power BI dashboard/report maintenance and RADAR BI application reporting
-  * Applied mathematical/statistical analysis for business and operational insights
+<span class="hero__section-label">Credentials</span>
 
-Teaching Experience
-======
-* **Lecturer in Mathematics (Computer Science)**, Université Quisqueya (UniQ), Sept 2025-Present
-  * Port-au-Prince, Ouest Department, Haiti
-  * Teach core concepts including logic, algebra, calculus, and discrete structures
-  * Emphasize applications to computing, software engineering, and data science
-  * Mentor students for both research-oriented and professional pathways
+## Certifications
 
-* **Teaching Assistant in Data Science & AI**, Université Quisqueya (UniQ), May 2025-Present
-  * Haiti (in partnership with Akademi bootcamp; Flatiron immersive curriculum)
-  * Support students on Python workflows: data wrangling, EDA, modeling, and deployment
-  * Tools: Pandas, NumPy, Scikit-learn, Matplotlib, Jupyter Notebooks
-  * Contribute to curriculum refinement with the lead instructor; run Q&A and code reviews
+{% if site.author.credly %}
+<p>Verified digital badges for these credentials are available on <a href="{{ site.author.credly }}" target="_blank" rel="noopener noreferrer">Credly</a>.</p>
+{% endif %}
 
-* **Mathematics Tutor**, Jan 2015-Jan 2026
-  * Port-au-Prince, Ouest Department, Haiti
-  * Explain complex concepts clearly; support exam preparation and problem-solving strategies
-  * Adapt pedagogy to individual student needs and confidence building
+<ul class="research-grid">
+  {% for cert in site.data.resume.certifications %}
+  <li class="research-card">
+    <h3 class="research-card__title">{{ cert.name }}</h3>
+    {% if cert.issuer %}<p class="case-study__meta-item">{{ cert.issuer }}</p>{% endif %}
+    <p class="research-card__desc">{{ cert.description }}</p>
+    {% if cert.link %}<a href="{{ cert.link }}" target="_blank" rel="noopener noreferrer" class="project-teaser__link">View credential &rarr;</a>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
 
-Research Projects
-======
-* **Mathematical Modeling of Chlordecone Contamination** (2025-2026)
-  * Developed continuous-time compartmental models for environmental contamination
-  * Modeled rainfall-modulated environmental transfer and human exposure pathways
-  * Implemented non-autonomous ODE systems with seasonal variations
-  * Created interactive Shiny visualization tools for simulation results
-  
-* **Character Theory in Finite Fields** (2025)
-  * Explored fundamental concepts of finite fields and their character theory
-  * Investigated additive characters and orthogonality relations
-  * Presented key theorems and mathematical frameworks
+---
 
-* **Data Engineering Platform Development** (2024-2026)
-  * Built DataHut-DuckHouse: modern analytics platform
-  * Integrated DuckDB, Apache Iceberg, Arrow Flight, dbt, and Trino
-  * Designed multi-tenant, scalable data stack architecture
+<span class="hero__section-label">Recognition</span>
 
-* **Scientific Computing Framework** (2024-2026)
-  * Developed research-grade multi-agent AI framework
-  * Combined symbolic mathematics, numerical methods, and RAG-based document intelligence
-  * Ensured reproducible execution for scientific workflows
+## Awards & Recognition
 
-Technical Skills
-======
-* **Mathematical Expertise**
-  * Pure Mathematics
-  * Mathematical Analysis
-  * Mathematical Statistics
-  * Statistical Modeling
-  * Group Theory
-  * Differential Equations
-  
-* **Data Science & Machine Learning**
-  * Machine Learning
-  * Deep Learning
-  * Statistical Analysis
-  * Data Analysis
-  * Predictive Modeling
-  
-* **Programming Languages**
-  * Python (Advanced)
-  * R (Advanced)
-  * C++ (Intermediate)
-  * SQL (Advanced)
-  * TypeScript/JavaScript
-  
-* **Data Engineering & Tools**
-  * DuckDB
-  * Apache Iceberg
-  * Arrow Flight
-  * dbt (data build tool)
-  * Trino
-  * Shiny (R)
-  
-* **Scientific Computing**
-  * Numerical Methods
-  * Symbolic Mathematics
-  * Mathematical Modeling
-  * Simulation & Visualization
+{% if site.data.resume.awards.size > 0 %}
+<ul class="research-grid">
+  {% for award in site.data.resume.awards %}
+  <li class="research-card">
+    <h3 class="research-card__title">{{ award.title }}</h3>
+    <p class="case-study__meta-item">{{ award.issuer }} &middot; {{ award.date }}</p>
+    <p class="research-card__desc">{{ award.description }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="rdv-panel">
+  <p class="rdv-subtitle">No formal awards to list yet at this stage of my research career. This section is ready to grow as that changes.</p>
+</div>
+{% endif %}
 
-Certifications
-======
-* Data or Specimen Only Research
-* Microsoft Certified: Fabric Data Engineer Associate
-* Microsoft Certified: Fabric Analytics Engineer Associate
-* Apache Spark SQL for Data Analysts
-* Google Data Analytics Professional Certificate
-* Google Business Intellignce Professional Certificate
+---
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-* No conference presentations yet.
+<span class="hero__section-label">Communication</span>
 
-Open Source Contributions
-======
-* **simulation-chlordecone** - Mathematical modeling of seasonal chlordecone contamination with Shiny visualization
-* **datahut-duckhouse** - Modern, modular, multi-tenant analytics platform (12+ stars)
-* **scientific-assistant** - Research-grade local-first multi-agent AI framework
-* **MedicalTriageSystem** - C++ application for intelligent patient triage using Random Forest ML
-* **sentiment-analysis** - NLP-based sentiment analysis system
+## Languages
 
-Professional Profiles
-======
-* **ORCID**: [0009-0008-8722-6411](https://orcid.org/0009-0008-8722-6411)
-* **ResearchGate**: [Geovany-Batista-Polo-Laguerre](https://www.researchgate.net/profile/Geovany-Batista-Polo-Laguerre)
-* **GitHub**: [Geobatpo07](https://github.com/Geobatpo07) (125+ repositories, 198+ contributions)
-* **LinkedIn**: [geobatpo07](https://www.linkedin.com/in/geobatpo07)
+<div>
+  {% for lang in site.data.resume.languages %}
+  <span class="language-card"><strong>{{ lang.language }}</strong> <span class="case-study__meta-item">{{ lang.level }}</span></span>
+  {% endfor %}
+</div>
 
-Languages
-======
-* French (Fluent)
-* English (Proficient)
-* Spanish (Conversational)
+---
 
-Research Interests
-======
-* Mathematical Modeling & Differential Equations
-* Data Science & Statistical Analysis
-* Machine Learning & Deep Learning
-* Data Engineering & Analytics Platforms
-* Scientific Computing & Numerical Methods
-* Environmental & Public Health Modeling
-* Decision Support Systems
+<span class="hero__section-label">Beyond the Core Work</span>
+
+## Professional Activities
+
+<ul class="hero__eyebrow" style="margin: 1.5rem 0;">
+  <li class="hero__chip">Teaching</li>
+  <li class="hero__chip">Mentoring</li>
+  <li class="hero__chip">Open-Source Contributions</li>
+  <li class="hero__chip">Scientific Communication</li>
+</ul>
+
+Teaching and mentoring are detailed on the [Teaching](/teaching/) page. Open-source work is documented in [Projects](/projects/) and on <a href="https://github.com/Geobatpo07" target="_blank" rel="noopener noreferrer">GitHub</a> (125+ repositories, 198+ contributions). Scientific communication beyond formal publications continues on <a href="https://stories.geovanylaguerre.net" target="_blank" rel="noopener noreferrer">Geo's Stories</a>. No conference presentations to date, noted here rather than omitted.
+
+---
+
+<span class="hero__section-label">Get the Full Picture</span>
+
+## Downloads
+
+<div class="hero__actions">
+  <a href="/files/Profile.pdf" class="btn">Download PDF CV</a>
+  <a href="/about/" class="btn btn--outline">Scientific Journey</a>
+  <span class="btn btn--outline" style="opacity: 0.55; cursor: not-allowed;" aria-disabled="true">Research Statement (Coming Soon)</span>
+  <span class="btn btn--outline" style="opacity: 0.55; cursor: not-allowed;" aria-disabled="true">Teaching Statement (Coming Soon)</span>
+</div>
+
+</div>
+
+<section class="hero hero--centered reveal">
+  <div class="hero__content">
+    <p class="hero__name" style="font-size: clamp(1.6rem, 3.4vw, 2.2rem); margin-bottom: 0.75rem;">Continue Exploring</p>
+    <div class="hero__actions">
+      <a href="/research/" class="btn btn--large">Research</a>
+      <a href="/projects/" class="btn btn--large btn--outline">Projects</a>
+      <a href="/teaching/" class="btn btn--large btn--outline">Teaching</a>
+      <a href="https://stories.geovanylaguerre.net" target="_blank" rel="noopener noreferrer" class="btn btn--large btn--outline">Stories</a>
+      <a href="/causerie/" class="btn btn--large btn--outline">Contact</a>
+    </div>
+  </div>
+</section>

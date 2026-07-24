@@ -16,8 +16,8 @@
         "label": "Competency Profile",
         "data": [95, 92, 89, 88, 90, 87, 85, 91],
         "fill": true,
-        "borderColor": "#0B7285",
-        "backgroundColor": "rgba(11,114,133,0.28)",
+        "borderColor": "#0891B2",
+        "backgroundColor": "rgba(8,145,178,0.22)",
         "borderWidth": 3,
         "pointRadius": 3
       }

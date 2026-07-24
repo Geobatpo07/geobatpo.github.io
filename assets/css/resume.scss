@@ -1,0 +1,239 @@
+---
+---
+/* ==========================================================================
+   RESUME PRINT TEMPLATE
+   Deliberately self-contained: no @import of the site's theme partials
+   (_sass/layout/_hero.scss, _cards.scss, _buttons.scss, masthead, etc).
+   This document must not inherit anything from the website's visual system.
+
+   Font: a plain system serif stack (Georgia / Times New Roman), not a
+   web font. Headless-Chromium PDF export renders variable Google Fonts
+   (tried: Source Serif 4) with visible glyph distortion — a real,
+   observed rendering bug, not a style preference. A system serif is also
+   more reliably ATS-parseable and removes a network dependency from the
+   CI PDF-generation step entirely.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 10.3pt;
+  line-height: 1.32;
+  color: #1a1a1a;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.resume {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 12mm 15mm;
+}
+
+p {
+  margin: 0 0 0.4em;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-decoration-color: #999;
+  text-underline-offset: 2px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  margin: 0 0 0.15em;
+  padding-left: 1em;
+}
+
+li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+}
+
+/* ---------- Header ---------- */
+
+.resume__header {
+  margin-bottom: 0.8em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #999;
+}
+
+.resume__name {
+  margin: 0 0 0.1em;
+  font-size: 19pt;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.resume__title {
+  margin: 0 0 0.3em;
+  font-size: 11pt;
+  font-weight: 600;
+  color: #333333;
+}
+
+.resume__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.65em;
+  font-size: 9pt;
+  color: #333333;
+}
+
+.resume__contact span:not(:last-child)::after {
+  content: "\00b7";
+  margin-left: 0.65em;
+  color: #999999;
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  margin-bottom: 0.6em;
+}
+
+.section__title {
+  margin: 0 0 0.3em;
+  font-size: 9.3pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0.15em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.section__summary {
+  margin: 0;
+  font-size: 10pt;
+}
+
+/* ---------- Entries (education / experience / research / projects) ---------- */
+
+.entry {
+  margin-bottom: 0.42em;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+}
+
+.entry__title {
+  font-weight: 700;
+  font-size: 10.1pt;
+}
+
+.entry__dates {
+  flex: none;
+  font-size: 9pt;
+  color: #444444;
+  white-space: nowrap;
+}
+
+.entry__subtitle {
+  font-size: 9.4pt;
+  font-style: italic;
+  color: #333333;
+  margin-bottom: 0.15em;
+}
+
+.entry__bullets {
+  margin-top: 0.1em;
+}
+
+.entry__bullets li {
+  font-size: 9.4pt;
+}
+
+.entry__desc {
+  font-size: 9.4pt;
+  margin: 0.1em 0 0;
+}
+
+.entry__meta {
+  font-size: 8.8pt;
+  color: #444444;
+  margin: 0.08em 0 0;
+}
+
+/* ---------- Compact lists (skills / certifications / languages) ---------- */
+
+.compact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.compact-list li {
+  font-size: 9.4pt;
+  margin-bottom: 0.24em;
+}
+
+.compact-list li:last-child {
+  margin-bottom: 0;
+}
+
+.compact-list .label {
+  font-weight: 700;
+}
+
+.lang-line {
+  margin: 0;
+  font-size: 9.4pt;
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 13mm;
+  }
+
+  body {
+    font-size: 9.8pt;
+  }
+
+  .resume {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+}

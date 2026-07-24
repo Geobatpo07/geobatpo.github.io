@@ -1,24 +1,28 @@
 /* ==========================================================================
-    DEFAULT THEME - LIGHT VERSION
+    ACADEMIC LUXURY THEME - LIGHT VERSION
+    Deep Navy / Royal Blue / White / Silver / Soft Cyan
     ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #2f7f93;
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$primary-color              : #1D4ED8; // royal blue
+$navy                       : #0B1E36; // deep navy
+$cyan                       : #0891B2; // text-safe cyan
+$cyan-soft                  : #22D3EE; // backgrounds/glows only, not text
+$gray                       : #5B6B82; // silver-slate
+$dark-gray                  : #0F1B2D;
+$darker-gray                : #0A1420;
+$light-gray                 : #8593A8;
+$lighter-gray               : #E2E6ED;
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
+$info-color                 : #1D4ED8;
+$notice-color               : #5B6B82;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 
 /* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$border-radius              : 10px;
+$box-shadow                 : 0 1px 2px rgba(11, 30, 54, 0.06);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
@@ -30,19 +34,30 @@ $sidebar-screen-min-width   : 1024px;
 :root {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
+    --global-footer-bg-color            : #F7F9FC;
     --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
+    --global-dark-border-color          : #C7CEDA;
+    --global-code-background-color      : #F3F5F9;
     --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
+    --global-fig-caption-color          : #{$light-gray};
+    --global-link-color                 : #1E40AF;
+    --global-link-color-hover           : #{$navy};
+    --global-link-color-visited         : #3B5FCB;
     --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
+    --global-masthead-link-color-hover  : #{$primary-color};
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
+
+    /* Academic luxury accent tokens */
+    --color-navy                        : #{$navy};
+    --color-royal-blue                  : #{$primary-color};
+    --color-silver                      : #{$light-gray};
+    --color-cyan                        : #{$cyan};
+    --color-cyan-soft                   : #{$cyan-soft};
+    --card-bg-color                     : #fff;
+    --card-shadow                       : 0 1px 2px rgba(11, 30, 54, 0.05), 0 12px 32px rgba(11, 30, 54, 0.06);
+    --card-shadow-hover                 : 0 4px 10px rgba(11, 30, 54, 0.07), 0 20px 44px rgba(11, 30, 54, 0.10);
+    --glass-bg-color                    : rgba(255, 255, 255, 0.72);
 }
 

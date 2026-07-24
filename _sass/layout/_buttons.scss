@@ -14,16 +14,19 @@
   color: #fff !important;
   font-family: $sans-serif;
   font-size: $type-size-6;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   background-color: var(--global-base-color);
   border: 0 !important;
   border-radius: $border-radius;
   cursor: pointer;
+  transition: $global-transition, transform 0.15s ease, box-shadow 0.15s ease;
 
   &:hover {
-    background-color: mix(white, #000, 20%);
+    background-color: var(--color-navy);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(11, 30, 54, 0.18);
   }
 
   .icon {
@@ -63,6 +66,20 @@
   &--light-outline {
     border: 1px solid #fff !important; /* override*/
     background-color: transparent;
+  }
+
+  /* outline, for use on light backgrounds (e.g. hero secondary CTAs) */
+
+  &--outline {
+    color: var(--global-text-color) !important;
+    border: 1px solid var(--global-dark-border-color) !important;
+    background-color: transparent;
+
+    &:hover {
+      color: var(--color-royal-blue) !important;
+      border-color: var(--color-royal-blue) !important;
+      background-color: transparent;
+    }
   }
 
   /* information */

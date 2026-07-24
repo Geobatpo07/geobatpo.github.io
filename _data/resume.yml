@@ -1,0 +1,188 @@
+# ==========================================================================
+# RESUME — single source of truth for all CV/resume content.
+#
+# Consumed by:
+#   - _pages/cv.md (renders every section below)
+#   - _plugins/resume_engine.rb (computes site.data.resume.timeline and
+#     site.data.resume.total_years_experience from the sections below,
+#     merged with the real site.publications collection)
+#   - scripts/generate-cv-pdf.mjs (renders /cv/ to files/Profile.pdf at
+#     CI build time — see .github/workflows/jekyll.yml)
+#
+# `dates` is the human-readable display string (unchanged from before).
+# `start_date` / `end_date` ("YYYY-MM", or omitted for ongoing) are added
+# purely so the Resume Engine can sort and compute chronology; they encode
+# the exact same dates already in `dates`, nothing new.
+# ==========================================================================
+name: "Geovany Batista Polo Laguerre"
+title: "Applied Mathematician & Data Scientist"
+location: "Paris, France"
+email: "mailto:lgeobatpo98@gmail.com"
+linkedin: "https://www.linkedin.com/in/geobatpo07"
+github: "https://github.com/Geobatpo07"
+
+summary: |
+  I hold a Master's degree in Mathematics and Applications from the Université des Antilles, specializing in Mathematical Modelling and Decision Support Tools with a focus on Environment and Health. My work sits at the intersection of applied mathematics, mathematical modelling, and scientific computing, extending into data science and artificial intelligence in service of environmental and healthcare decision support. Alongside my research, I work as a Data Analyst at Solutions S.A. and teach mathematics and data science at Université Quisqueya.
+
+  My research interests center on building mathematical models rigorous enough to understand complex systems and reliable enough to support real decisions: currently expressed through environmental contamination modelling, numerical methods for wave propagation, and a reproducible AI research framework. My long-term objective is doctoral research at the intersection of scientific computing, artificial intelligence, and healthcare analytics.
+
+  My areas of expertise span pure and applied mathematics, numerical analysis, statistics and biostatistics, machine learning, and data engineering, grounded throughout in a commitment to reproducibility and interpretability over black-box results.
+
+education:
+  - degree: "M.S. in Mathematics and Applications"
+    institution: "Université des Antilles"
+    dates: "Sept 2024 – Jun 2026"
+    start_date: "2024-09"
+    end_date: "2026-06"
+    track: "Department of Mathematics and IT, Specialization: Mathematical Modelling and Decision Support Tools, Focus: Environment & Health"
+    research_topics: "Differential equations for mathematical modelling"
+    supervisor: "Prof. Pascal Poullet"
+    related_link: "/research/"
+    related_link_label: "Related research"
+
+  - degree: "B.S. in Mathematics"
+    institution: "École Normale Supérieure de l'Université d'État d'Haïti"
+    dates: "Nov 2021 – Jul 2022"
+    start_date: "2021-11"
+    end_date: "2022-07"
+
+  - degree: "Engineer's Degree, Civil Engineering"
+    institution: "Faculté des Sciences de l'Université d'État d'Haïti"
+    dates: "Oct 2017 – Jul 2022"
+    start_date: "2017-10"
+    end_date: "2022-07"
+
+  - degree: "MicroMasters in Statistics and Data Science"
+    institution: "MITx"
+    dates: "Jan 2024"
+    start_date: "2024-01"
+    end_date: "2024-01"
+    track: "Methods track"
+
+research_experience:
+  - title: "M2 Research Internship: Ultrasound Propagation Modelling"
+    venue: "LAMIA, Université des Antilles, Guadeloupe"
+    dates: "Jan 2026 – May 2026"
+    start_date: "2026-01"
+    end_date: "2026-05"
+    context: "Mathematical analysis and simulation of ultrasound propagation models."
+    objectives: "Study the Westervelt equation and quasilinear strongly damped wave models."
+    methods: "Python numerical simulations using operator splitting and finite differences."
+    contribution: "Supervised by Prof. Pascal Poullet and Prof. Léa Batteux."
+
+  - title: "Research Internship: Cyclone Flow Modelling"
+    venue: "MEMIAD, Martinique"
+    dates: "Apr 2025 – Jun 2025"
+    start_date: "2025-04"
+    end_date: "2025-06"
+    context: "Mathematical modelling applied to tropical cyclones."
+    objectives: "Develop ODE/PDE-based atmospheric flow models and asymptotic analysis around the cyclone eye."
+    methods: "Numerical simulations in Python using a Lax-Friedrichs scheme."
+    contribution: "Supervised by Prof. Maximilian F. Hasler."
+
+  - title: "Master's Research"
+    venue: "Université des Antilles, Department of Mathematics and IT"
+    dates: "2024 – Jun 2026"
+    start_date: "2024-01"
+    end_date: "2026-06"
+    # Same period/substance as the M.S. education entry; omitted from the
+    # computed timeline to avoid a redundant milestone.
+    include_in_timeline: false
+    context: "Master's research within the Mathematical Modelling and Decision Support Tools specialization, Environment & Health focus."
+    objectives: "Investigate differential equations for mathematical modelling of complex systems."
+    methods: "Compartmental and non-autonomous ODE systems, applied to environmental contamination."
+    contribution: "Supervised by Prof. Pascal Poullet."
+    related_link: "/projects/chlordecone/"
+    related_link_label: "Related project"
+
+  - title: "Student Researcher"
+    venue: "Laboratoire de Mathématiques et Applications, Université d'État d'Haïti"
+    dates: "Oct 2017 – Present"
+    start_date: "2017-10"
+    context: "Long-running independent research activity in applied mathematics."
+    objectives: "Explore mathematical modelling and finite field theory questions outside of formal coursework."
+    methods: "Independent theoretical work, including character theory over finite fields."
+    contribution: "Foundation for the applied mathematics thread running through all later research."
+    related_link: "/about/"
+    related_link_label: "The full trajectory"
+
+experience:
+  - title: "Data Analyst"
+    venue: "Solutions S.A., Port-au-Prince, Haiti"
+    dates: "Jul 2023 – Present"
+    start_date: "2023-07"
+    responsibilities: "Contributed to ETL process design and testing, and reporting automation using .NET and Python."
+    contributions: "Supported Power BI dashboard and report maintenance, and RADAR BI application reporting."
+    impact: "Applied mathematical and statistical analysis to support business and operational decision making."
+    technologies: ["Python", ".NET", "Power BI", "SQL"]
+
+  - title: "Lecturer in Mathematics for Computer Science"
+    venue: "Université Quisqueya (UniQ)"
+    dates: "Sept 2025 – Present"
+    start_date: "2025-09"
+    responsibilities: "Core mathematical foundations for computing-oriented programs."
+
+  - title: "Teaching Assistant, Data Science & AI"
+    venue: "Université Quisqueya (UniQ), in partnership with Akademi and the Flatiron immersive track"
+    dates: "May 2025 – Present"
+    start_date: "2025-05"
+    responsibilities: "Supporting the Data Science & AI track delivered in partnership with Akademi and the Flatiron immersive program."
+
+skills:
+  - category: "Mathematical Expertise"
+    items: ["Pure Mathematics", "Mathematical Analysis", "Mathematical Statistics", "Group Theory", "Differential Equations"]
+
+  - category: "Data Science & Machine Learning"
+    items: ["Machine Learning", "Deep Learning", "Statistical Analysis", "Predictive Modelling"]
+
+  - category: "Programming Languages"
+    items: ["Python", "R", "C++", "SQL", "TypeScript"]
+
+  - category: "Data Engineering & Tools"
+    items: ["DuckDB", "Apache Iceberg", "Arrow Flight", "dbt", "Trino", "Shiny"]
+
+  - category: "Scientific Computing"
+    items: ["Numerical Methods", "Symbolic Mathematics", "Mathematical Modelling", "Simulation & Visualization"]
+
+  - category: "Engineering Tools"
+    items: ["Git", "GitHub", "Docker"]
+
+certifications:
+  - name: "Microsoft Certified: Fabric Data Engineer Associate"
+    issuer: "Microsoft"
+    description: "Designing and implementing data engineering solutions on Microsoft Fabric."
+
+  - name: "Microsoft Certified: Fabric Analytics Engineer Associate"
+    issuer: "Microsoft"
+    description: "Building analytics solutions and semantic models on Microsoft Fabric."
+
+  - name: "Google Data Analytics Professional Certificate"
+    issuer: "Google"
+    description: "Data cleaning, analysis, and visualization fundamentals for analytics work."
+
+  - name: "Google Business Intelligence Professional Certificate"
+    issuer: "Google"
+    description: "BI processes, dashboarding, and stakeholder reporting."
+
+  - name: "Apache Spark SQL for Data Analysts"
+    issuer: "Databricks"
+    description: "Querying and analyzing large-scale data with Spark SQL."
+
+  - name: "Data or Specimen Only Research"
+    description: "Research ethics training for studies involving data or specimens only."
+
+# Empty for now; the CV page renders a placeholder until entries exist.
+awards: []
+
+languages:
+  - language: "French"
+    level: "Fluent"
+
+  - language: "English"
+    level: "Proficient"
+
+  - language: "Spanish"
+    level: "Conversational"
+
+# Empty for now — no interests content exists on the site yet; not fabricated.
+interests: []
