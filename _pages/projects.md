@@ -2,8 +2,12 @@
 layout: single
 permalink: /projects/
 title: "Projects"
+description: "A curated library of case studies in environmental modelling, scientific computing, AI research tooling, and healthcare decision support, each covering the problem, methodology, and results."
 full_width: true
 author_profile: false
+redirect_from:
+  - /portfolio/
+  - /portfolio.html
 ---
 
 <section class="hero hero--centered reveal">

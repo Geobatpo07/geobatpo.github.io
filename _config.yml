@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Geovany Batista Polo LAGUERRE"
 title_separator          : "-"
 name                     : &name "Geovany Batista Polo LAGUERRE"
-description              : &description "Applied Mathematics, Scientific Computing & AI Researcher | Master's in Mathematics and Applications"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Applied Mathematics, Scientific Computing, Data Science, AI & Healthcare Analytics Researcher | Master's in Mathematics and Applications"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://geovanylaguerre.net # Canonical base URL used for sitemaps, canonical links, and structured data
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -27,7 +27,7 @@ author:
   name             : "Geovany Batista Polo LAGUERRE"
   pronouns         : "he/him"  
   bio              : "Master's in Mathematics and Applications, Mathematical Modelling and Decision Support Tools (Environment & Health) | Applied Mathematics, Scientific Computing & AI"
-  location         : "Villeneuve-le-Roi, Île-de-France, France"
+  location         : "Paris, France"
   employer         : "Université des Antilles"
   uri              : # URL
   email            : "lgeobatpo98@gmail.com"
@@ -157,7 +157,7 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : "Geo_04.png" # Social media default site image (stored in /images)
-og_description           : "Research and applied work in applied mathematics, scientific computing, data science, and artificial intelligence."
+og_description           : "Research and applied work in applied mathematics, scientific computing, data science, artificial intelligence, and healthcare analytics."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -168,6 +168,7 @@ social:
     - "https://www.linkedin.com/in/geobatpo07"
     - "https://www.researchgate.net/profile/Geovany-Batista-Polo-Laguerre"
     - "https://orcid.org/0009-0008-8722-6411"
+    - "https://www.credly.com/users/geovany-laguerre"
 
 
 # Analytics

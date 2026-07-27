@@ -4,6 +4,7 @@ redirect_from:
   - /contact
   - /contact/
 title: "Contact"
+description: "Get in touch to discuss research collaboration, teaching, mentoring, or scientific computing and healthcare analytics projects."
 layout: single
 author_profile: false
 full_width: true
@@ -214,7 +215,7 @@ Choose a convenient time below if you would like to discuss research, collaborat
 ## Location
 
 <div class="rdv-panel">
-  <p class="rdv-title">Villeneuve-le-Roi, Île-de-France, France</p>
+  <p class="rdv-title">Paris, France</p>
   <p class="rdv-subtitle">
     Available for both remote and in-person collaborations when appropriate.
   </p>

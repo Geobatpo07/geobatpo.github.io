@@ -2,6 +2,8 @@
 title: "Medical Triage System"
 excerpt: "A C++ decision-support tool using a Random Forest model to support pre-triage prioritization in emergency contexts."
 permalink: /projects/medical-triage-system/
+redirect_from:
+  - /portfolio/medical-triage-system/
 status: "Prototype Complete"
 status_key: "Prototype"
 domain: "Healthcare Analytics"

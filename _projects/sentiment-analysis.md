@@ -2,6 +2,8 @@
 title: "Sentiment Analysis Pipeline"
 excerpt: "An NLP pipeline for automated sentiment classification, built as a testbed for text-preprocessing and evaluation methodology."
 permalink: /projects/sentiment-analysis/
+redirect_from:
+  - /portfolio/sentiment-analysis/
 status: "Completed"
 status_key: "Completed"
 domain: "Artificial Intelligence"

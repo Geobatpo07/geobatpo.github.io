@@ -2,6 +2,7 @@
 layout: single
 permalink: /teaching/
 title: "Teaching"
+description: "Teaching philosophy and approach to mathematics, scientific computing, AI, and data science education, from undergraduate foundations to graduate research mentoring."
 full_width: true
 author_profile: false
 ---

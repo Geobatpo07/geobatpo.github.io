@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Applied Mathematics, Data Science & AI Research"
+description: "Geovany Batista Polo Laguerre: applied mathematics, scientific computing, data science, AI, and healthcare analytics research, from differential equations to public-health decision support."
 author_profile: false
 full_width: true
 ---

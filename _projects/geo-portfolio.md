@@ -2,6 +2,8 @@
 title: "Geo Portfolio"
 excerpt: "A Next.js and TypeScript site for presenting data engineering, machine learning, and scientific computing projects."
 permalink: /projects/geo-portfolio/
+redirect_from:
+  - /portfolio/geo-portfolio/
 status: "Completed"
 status_key: "Completed"
 domain: "Scientific Data Infrastructure"

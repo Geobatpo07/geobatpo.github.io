@@ -2,8 +2,12 @@
 layout: single
 permalink: /research/
 title: "Research"
+description: "Research questions, themes, and current work in mathematical modelling, scientific computing, artificial intelligence, and healthcare analytics, with research outputs and open-source software."
 full_width: true
 author_profile: false
+redirect_from:
+  - /publications/
+  - /publications.html
 ---
 
 <section class="hero hero--centered reveal">

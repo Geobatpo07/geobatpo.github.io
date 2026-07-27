@@ -2,6 +2,8 @@
 title: "Scientific Assistant"
 excerpt: "A local-first, multi-agent framework combining symbolic mathematics, numerical methods, and document intelligence for reproducible research."
 permalink: /projects/scientific-assistant/
+redirect_from:
+  - /portfolio/scientific-assistant/
 status: "Active Development"
 status_key: "Active"
 domain: "Artificial Intelligence"

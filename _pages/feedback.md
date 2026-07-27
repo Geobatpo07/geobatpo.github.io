@@ -2,6 +2,7 @@
 layout: single
 permalink: /feedback/
 title: "Feedback"
+description: "Share feedback on teaching, mentoring, or collaboration experiences."
 full_width: true
 author_profile: false
 ---

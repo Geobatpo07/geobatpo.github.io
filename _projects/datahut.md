@@ -2,6 +2,8 @@
 title: "DataHut-DuckHouse"
 excerpt: "A modular, multi-tenant analytics platform built for reproducibility first: the data infrastructure underneath the rest of this research."
 permalink: /projects/datahut/
+redirect_from:
+  - /portfolio/datahut-duckhouse/
 status: "Active · Open Source"
 status_key: "Active"
 domain: "Scientific Data Infrastructure"

@@ -3,6 +3,7 @@ layout: resume-print
 permalink: /resume-print/
 title: "Resume"
 noindex: true
+sitemap: false
 ---
 
 {% assign r = site.data.resume %}

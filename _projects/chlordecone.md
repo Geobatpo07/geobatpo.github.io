@@ -2,6 +2,8 @@
 title: "Mathematical Modelling of Chlordecone Contamination"
 excerpt: "A compartmental ODE model of seasonal chlordecone exposure in Guadeloupe, published as a research preprint and deployed as a live decision-support simulation tool."
 permalink: /projects/chlordecone/
+redirect_from:
+  - /portfolio/simulation-chlordecone/
 status: "Active Research"
 status_key: "Active"
 domain: "Environmental Modelling"

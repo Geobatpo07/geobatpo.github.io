@@ -1,6 +1,7 @@
 ---
 permalink: /about/
 title: "My Scientific Journey"
+description: "How one question, how can mathematics help us understand complex systems well enough to make better decisions, led from pure mathematics through scientific computing and data to AI and healthcare analytics."
 full_width: true
 author_profile: false
 redirect_from:

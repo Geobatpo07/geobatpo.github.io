@@ -150,6 +150,17 @@
       "@id": {{ site.url | append: "/#person" | jsonify }},
       "name": {{ site.author.name | default: site.name | jsonify }},
       "url": {{ site.url | append: "/" | jsonify }},
+      "jobTitle": "Applied Mathematics, Scientific Computing & AI Researcher",
+      "affiliation": {
+        "@type": "Organization",
+        "name": {{ site.author.employer | jsonify }}
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "École Normale Supérieure de l'Université d'État d'Haïti" },
+        { "@type": "CollegeOrUniversity", "name": "Faculté des Sciences de l'Université d'État d'Haïti" },
+        { "@type": "EducationalOrganization", "name": "MITx" }
+      ],
+      "knowsAbout": ["Applied Mathematics", "Mathematical Modelling", "Scientific Computing", "Data Science", "Artificial Intelligence", "Healthcare Analytics"],
       "sameAs": {{ site.social.links | jsonify }}
     },
     {
