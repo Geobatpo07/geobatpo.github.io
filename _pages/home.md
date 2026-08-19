@@ -18,8 +18,6 @@ full_width: true
       <li class="hero__chip">Data Science</li>
       <li class="hero__chip-arrow" aria-hidden="true">&rarr;</li>
       <li class="hero__chip">Artificial Intelligence</li>
-      <li class="hero__chip-arrow" aria-hidden="true">&rarr;</li>
-      <li class="hero__chip">Healthcare Analytics</li>
     </ul>
 
     <h1 class="hero__name">Geovany Batista Polo Laguerre</h1>
