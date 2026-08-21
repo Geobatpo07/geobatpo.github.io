@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Applied Mathematics, Data Science & AI Research"
-description: "Geovany Batista Polo Laguerre: applied mathematics, scientific computing, data science, AI, and healthcare analytics research, from differential equations to public-health decision support."
+description: "Geovany Batista Polo Laguerre: applied mathematics, scientific computing, data science, and AI research, from differential equations to real-world decision support."
 author_profile: false
 full_width: true
 ---
@@ -24,7 +24,7 @@ full_width: true
 
     <p class="hero__statement">
       Mathematics is the foundation everything else stands on. I build outward from it, through
-      scientific computing, artificial intelligence, and healthcare analytics, to turn complex
+      scientific computing and artificial intelligence, to turn complex
       systems into decisions people can trust.
     </p>
 

@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "My Scientific Journey"
-description: "How one question, how can mathematics help us understand complex systems well enough to make better decisions, led from pure mathematics through scientific computing and data to AI and healthcare analytics."
+description: "How one question, how can mathematics help us understand complex systems well enough to make better decisions, led from pure mathematics through scientific computing, data, and AI, with healthcare and environmental science as specialization domains."
 full_width: true
 author_profile: false
 redirect_from:
@@ -74,11 +74,11 @@ In practice that means combining approaches rather than replacing one with anoth
 
 <span class="hero__section-label">Chapter Five</span>
 
-## Towards Healthcare
+## Where the Methods Specialize
 
-All four of these threads (rigor, computation, data, learning) only matter to me insofar as they can be trusted with something that matters. Healthcare and environmental science are where that stake is highest: a model of contamination exposure, or a triage recommendation, isn't an academic exercise. It's an input into someone's decision, sometimes about someone's health. That is not a comfortable place to be careless.
+All four of these threads (rigor, computation, data, learning) only matter to me insofar as they can be trusted with something that matters. Healthcare and environmental science are the two specializations where that stake is highest for me: a model of contamination exposure, or a triage recommendation, isn't an academic exercise. It's an input into someone's decision, sometimes about someone's health. That is not a comfortable place to be careless.
 
-It's exactly why the earlier chapters exist: because decision support in healthcare and public health deserves mathematics rigorous enough to be right, and transparent enough to be questioned. That is the direction this is heading: not artificial intelligence for its own sake, not modelling for its own sake, but scientific tools built carefully enough to be trusted with real consequences.
+It's exactly why the earlier chapters exist: because decision support in healthcare, public health, and environmental systems deserves mathematics rigorous enough to be right, and transparent enough to be questioned. That is the direction this is heading: not artificial intelligence for its own sake, not modelling for its own sake, but scientific tools built carefully enough to be trusted with real consequences, wherever I choose to specialize next.
 
 <p class="hero__why">The question I started with hasn't changed. Only the tools I have to answer it with.</p>
 
@@ -97,7 +97,6 @@ Not a résumé. A record of how one question kept finding new tools to answer it
   <li><span class="scientific-timeline__label">Statistics &amp; Biostatistics</span></li>
   <li><span class="scientific-timeline__label">Data Science</span></li>
   <li><span class="scientific-timeline__label">Artificial Intelligence</span></li>
-  <li><span class="scientific-timeline__label">Healthcare Analytics</span></li>
   <li><span class="scientific-timeline__label">Decision Support Systems</span></li>
 </ol>
 
